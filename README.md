@@ -1,1 +1,1 @@
-# Infokup2019-2020
+GitHub za Infokup 2019/2020.
