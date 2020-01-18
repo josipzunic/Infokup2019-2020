@@ -1,0 +1,26 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "This is app's backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josipzunic/Infokup2019-2020.git"
+  },
+  "keywords": [
+    "infokup",
+    "2019/2020"
+  ],
+  "author": "JosipZunic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josipzunic/Infokup2019-2020/issues"
+  },
+  "homepage": "https://github.com/josipzunic/Infokup2019-2020#readme",
+  "dependencies": {
+    "pubchem-access": "^1.0.1"
+  }
+}
