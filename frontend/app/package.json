@@ -10,7 +10,7 @@
     "electron-is-dev": "^1.1.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.3.0",    
+    "react-scripts": "3.3.0",
     "electron": "^7.1.7"
   },
   "scripts": {
@@ -21,9 +21,6 @@
     "electron-build": "electron-builder",
     "build": "npm run react-build && npm run electron-build",
     "start": "concurrently \"cross-env BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron .\""
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -40,12 +37,6 @@
   "devDependencies": {
     "concurrently": "^5.0.2",
     "electron-builder": "^21.2.0",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-plugin-import": "^2.19.1",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.17.0",
-    "prettier": "^1.19.1",
     "wait-on": "^3.3.0"
   }
 }
