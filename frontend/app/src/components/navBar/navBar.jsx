@@ -1,19 +1,20 @@
 import React from 'react';
+import styles from '../navBar/navBar.module.css';
 
 const Navbar = () => (
-    <nav>
-        <ul>
+    <nav className={styles['navbar']}>
+        <ul className={styles['navlist']}>
             <li>
-                Home
+                <p>Home</p>
             </li>
             <li>
-                Plug in a compound
+                <p>Plug in a compound</p>
             </li>
             <li>
-                Basic compounds
+                <p>Basic compounds</p>
             </li>
             <h3>
-                Logo
+                <p>Logo</p>
             </h3>
         </ul>
     </nav>
