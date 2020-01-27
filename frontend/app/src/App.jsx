@@ -15,6 +15,7 @@ const App = () => (
         <Router>
             <Navbar />
             <Route exact path="#basicmolecule" component={Test2} />
+            <Route exact path="#pluginmolecule" component={Test} />
         </Router>
     </div>
 );
