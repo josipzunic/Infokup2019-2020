@@ -14,8 +14,17 @@
     align-items: center;
     width: 100%;
 }
-.navlist p:hover {
+.app_link {
+    text-decoration: none;
+    color: white;
+}
+
+.app_link:hover {
     cursor: pointer;
     color: #E75161;
+}
+
+h3 {
+    cursor: context-menu;
 }
 

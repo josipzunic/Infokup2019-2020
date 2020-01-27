@@ -1,20 +1,21 @@
 import React from 'react';
 import styles from '../navBar/navBar.module.css';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => (
     <nav className={styles['navbar']}>
         <ul className={styles['navlist']}>
             <li>
-                <p>Home</p>
+                <Link className={styles['app_link']} to='/'> Home </Link>
             </li>
             <li>
-                <p>Plug in a compound</p>
+                <Link className={styles['app_link']} to='/PlugInCompound'> Plug in a molecule </Link>
             </li>
             <li>
-                <p>Basic compounds</p>
+                <Link className={styles['app_link']} to='/BasicCompounds'> Basic molecules </Link>
             </li>
             <h3>
-                <p>Logo</p>
+                Logo
             </h3>
         </ul>
     </nav>

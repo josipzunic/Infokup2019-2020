@@ -1,0 +1,7 @@
+.container {
+    display: flex;
+}
+.mol_info {
+    margin-left: 30px;
+    margin-top: 50px;
+}

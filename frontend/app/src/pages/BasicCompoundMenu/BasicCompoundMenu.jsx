@@ -1,9 +1,14 @@
 import React from 'react';
+import Navbar from '../../components/navBar/navBar';
+import styles from '../BasicCompoundMenu/BasicCompoundMenu.module.css';
 
-const Test2 = () => (
+const BasicCompounds = () => (
     <div>
-        test2
+        <Navbar />
+        <div className={styles['basic_menu']}>
+            MYB ZA DRZAVNO
+        </div>
     </div>
 );
 
-export default Test2;
+export default BasicCompounds;
