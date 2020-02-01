@@ -17,6 +17,9 @@ const PlugInCompound = () => (
                 <MoleculeInfo />
             </div>
         </div>
+        <div className={styles['button_div']}>
+            <button> START </button>
+        </div>
     </div>
 );
 
