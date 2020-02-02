@@ -1,14 +1,13 @@
 const serialport = require('serialport');
-let SerialPort = serialport.SerialPort;
 
-let port = new SerialPort('PORT', {
-    baudrate: 9600,
-    parser: serialport.parsers.readline('\n'),
+const port = new serialport('COM3', {
+    baudRate: 9600,
+    parser: new serialport.parsers.Readline('\n'),
 });
 
 port.on('open', function () {
-    console.log('open');
     port.on('data', function(data) {
-        console.log(data);
+        console.log(data.toString());
+        port.close();
     });
 });
