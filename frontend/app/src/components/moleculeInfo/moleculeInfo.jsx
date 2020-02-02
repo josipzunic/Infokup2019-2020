@@ -1,10 +1,20 @@
 import React from 'react';
 import styles from '../moleculeInfo/moleculeInfo.module.css';
 
-const MoleculeInfo = () => (
-    <div className={styles['molecule_info']}>
+class MoleculeInfo extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
-    </div>
-);
+    render() {
+        return(
+            <div className={styles['molecule_info']}>
+                <div className={styles['text']}>
+                    {this.props.res.apiResponse}
+                </div>
+            </div>
+        )
+    }
+}
 
 export default MoleculeInfo;

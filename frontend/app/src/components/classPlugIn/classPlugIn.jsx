@@ -7,7 +7,9 @@ import styles from '../../pages/PlugInCompound/PlugInCompound.module.css';
 class PlugIn extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { apiResponse: '' };
+        this.state = { 
+            apiResponse: '', 
+        };
         this.callAPI = this.callAPI.bind(this);
 
     }
@@ -17,18 +19,23 @@ class PlugIn extends React.Component {
             .then(res => res.text())
             .then(res => this.setState({ apiResponse: res }))
             .catch(err => err);
+        console.log(this.state);
     }
 
     render() {
+        const data = this.state.apiResponse;
+        const res = {
+            apiResponse: data,
+        }
         return (
             <div>
                 <div className={styles['container']}>
                     <div>
-                        <MoleculeBox> {this.state.apiResponse} </MoleculeBox>
+                        <MoleculeBox />
                         <MoleculeName />
                     </div>
                     <div className={styles['mol_info']}>
-                        <MoleculeInfo />
+                        <MoleculeInfo res={res}/>
                     </div>
                 </div>
                 <div className={styles['button_div']}>
