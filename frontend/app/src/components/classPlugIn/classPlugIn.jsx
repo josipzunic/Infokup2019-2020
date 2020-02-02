@@ -19,7 +19,6 @@ class PlugIn extends React.Component {
             .then(res => res.text())
             .then(res => this.setState({ apiResponse: res }))
             .catch(err => err);
-        console.log(this.state);
     }
 
     render() {
