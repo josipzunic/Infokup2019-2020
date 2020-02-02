@@ -5,7 +5,7 @@ let pubchem = require('./node_modules/pubchem-access').domain('compound');
 let sentSmile = '[H]-[H]';
 let cors = require('cors');
 
-app.use(cors);
+app.use(cors());
  
 app.get('/getCompound', (req, res) => {
     pubchem
