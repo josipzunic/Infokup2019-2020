@@ -13,20 +13,7 @@ class PlugIn extends React.Component {
     }
 
     callAPI() {
-        let headers = new Headers();
-        
-        headers.append('Content-Type', 'application/json');
-        headers.append('Accept', 'application/json');
-        headers.append('Access-Control-Allow-Origin', 'http://localhost:2000');
-        headers.append('Access-Control-Allow-Credentials', 'true');
-        headers.append('GET', 'POST', 'OPTIONS');
-
-        fetch('http://localhost:2000/getCompound',
-            {
-                mode: 'no-cors',
-                method: 'GET',
-                headers: headers
-            })
+        fetch('http://localhost:2000/getCompound')
             .then(res => res.text())
             .then(res => this.setState({ apiResponse: res }))
             .catch(err => err);
