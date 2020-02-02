@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/josipzunic/Infokup2019-2020#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "pubchem-access": "^1.0.1"
   }
