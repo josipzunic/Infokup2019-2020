@@ -7,6 +7,12 @@ let cors = require('cors');
 
 app.use(cors());
  
+app.post('/setSmile', (req, res) => {
+    sentSmile = req.body;
+    console.log(sentSmile);
+    res.sendStatus(200);
+});
+
 app.get('/getCompound', (req, res) => {
     pubchem
     .setSmiles(sentSmile)
