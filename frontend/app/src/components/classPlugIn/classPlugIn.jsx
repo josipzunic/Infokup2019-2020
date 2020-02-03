@@ -16,13 +16,14 @@ class PlugIn extends React.Component {
 
     callAPI() {
         fetch('http://localhost:2000/getCompound')
-            .then(res => res.text())
+            .then(res => res.json())
             .then(res => this.setState({ apiResponse: res }))
             .catch(err => err);
     }
 
     render() {
-        const data = this.state.apiResponse;
+        let data = this.state.apiResponse;
+        data = Object.entries(data);
         const res = {
             apiResponse: data,
         }
