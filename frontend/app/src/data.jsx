@@ -5,9 +5,13 @@ const port = new serialport('COM3', {
     parser: new serialport.parsers.Readline('\n'),
 });
 
+let molecule = '';
+
 port.on('open', function () {
     port.on('data', function(data) {
-        console.log(data.toString());
+        molecule = data.toString();
         port.close();
     });
 });
+
+export default molecule;

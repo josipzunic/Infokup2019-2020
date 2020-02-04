@@ -3,6 +3,7 @@ import MoleculeBox from '../../components/moleculeBox/moleculeBox';
 import MoleculeName from '../../components/moleculeName/moleculeName';
 import MoleculeInfo from '../../components/moleculeInfo/moleculeInfo';
 import styles from '../../pages/PlugInCompound/PlugInCompound.module.css';
+import molecule from '../../data';
 
 class PlugIn extends React.Component {
     constructor(props) {
@@ -15,9 +16,23 @@ class PlugIn extends React.Component {
     }
 
     callAPI() {
+
+        const headers = new Headers();
+        headers.append('Molecule-to-catch');
+
+        const options = {
+            method: 'POST',
+            headers,
+            body: molecule,
+        };
+
+        const request = new Request('http://localhost:2000/setSmile', options);
+
+        //poslat post request
+        //.then (poslat get reuqest .then // sta god dalje)
+
         fetch('http://localhost:2000/getCompound')
-            .then(res => res.json())
-            .then(res => this.setState({ apiResponse: res }))
+            .then(res => this.setState({apiResponse: res.json()}))
             .catch(err => err);
     }
 
