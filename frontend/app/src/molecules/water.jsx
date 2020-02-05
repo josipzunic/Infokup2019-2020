@@ -1,4 +1,4 @@
-import '../../kekule';
+/* import '../../kekule';
 
 function createWater() {
     let molecule = new Kekule.Molecule();
@@ -23,3 +23,4 @@ function createWater() {
 const water = createWater();
 
 export default water;
+*/
