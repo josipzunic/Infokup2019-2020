@@ -1,10 +1,13 @@
 import React from 'react';
-import styles from '../moleculeBox/moleculeBox.module.css'
+import styles from '../moleculeBox/moleculeBox.module.css';
+import water from '../../molecules/water';
 
-const MoleculeBox = () => (
-    <div className={styles['molecule_box']}>
+const MoleculeBox = () => {
+    return (
+        <div className={styles['molecule_box']}>
 
-    </div>
-);
+        </div>
+    )
+};
 
 export default MoleculeBox;

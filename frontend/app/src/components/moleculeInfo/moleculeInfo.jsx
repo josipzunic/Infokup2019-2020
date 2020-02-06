@@ -1,10 +1,23 @@
 import React from 'react';
 import styles from '../moleculeInfo/moleculeInfo.module.css';
 
-const MoleculeInfo = () => (
-    <div className={styles['molecule_info']}>
+class MoleculeInfo extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
 
-    </div>
-);
+    render() {
+        let propResponse = this.props.data;
+        propResponse = Object.fromEntries(propResponse);
+        return (
+            <div className={styles['molecule_info']}>
+                <b>CID:     </b>{propResponse.CID}<br /><br />
+                <b>Exact MAss:     </b>{propResponse.ExactMass}<br /><br />
+                <b>Molecular Formula:     </b>{propResponse.MolecularFormula}<br /><br />
+            </div>
+        )
+    }
+}
 
 export default MoleculeInfo;
