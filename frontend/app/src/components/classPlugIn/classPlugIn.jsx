@@ -18,13 +18,12 @@ class PlugIn extends React.Component {
             apiResponse: '',
         };
         this.callAPI = this.callAPI.bind(this);
-
     }
 
     callAPI() {
         axios.get('http://localhost:2000/getCompound', {
             headers: HEADERS,
-            params: {molecule: getMolecule()},
+            params: { molecule: getMolecule() },
         })
             .then(response => {
                 this.setState({
@@ -57,4 +56,3 @@ class PlugIn extends React.Component {
 }
 
 export default PlugIn;
-

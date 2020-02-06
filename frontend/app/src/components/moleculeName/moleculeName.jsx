@@ -18,4 +18,5 @@ class MoleculeName extends React.Component {
         )
     }
 }
+
 export default MoleculeName;

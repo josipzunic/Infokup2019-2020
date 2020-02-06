@@ -10,8 +10,6 @@ class MoleculeInfo extends React.Component {
     render() {
         let propResponse = this.props.data;
         propResponse = Object.fromEntries(propResponse);
-        //propResponse.apiResponse = Object.fromEntries(propResponse.apiResponse);
-        console.log(propResponse);
         return (
             <div className={styles['molecule_info']}>
                 <b>CID:     </b>{propResponse.CID}<br /><br />
