@@ -6,7 +6,7 @@ const App = () => (
     <div>
         <Navbar />
         <div className={styles['directions']}>
-            KAKO APLIKACIJA RADI
+            
         </div>
     </div>
 );

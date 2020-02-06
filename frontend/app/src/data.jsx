@@ -5,7 +5,12 @@
     parser: new serialport.parsers.Readline('\n'),
 });
 */
-let molecule = '[NH4+]';
+
+
+function getMolecule() {
+    return 'COOH'
+}
+
 /*
 port.on('open', function () {
     port.on('data', function(data) {
@@ -14,4 +19,4 @@ port.on('open', function () {
     });
 });
 */
-export default molecule;
+export default getMolecule;

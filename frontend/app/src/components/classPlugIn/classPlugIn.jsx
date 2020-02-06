@@ -1,11 +1,15 @@
 import React from 'react';
-import molecule from '../../data';
+import getMolecule from '../../data';
 import MoleculeInfo from '../../components/moleculeInfo/moleculeInfo';
 import MoleculeName from '../../components/moleculeName/moleculeName';
 import MoleculeBox from '../../components/moleculeBox/moleculeBox';
 import styles from '../../pages/PlugInCompound/PlugInCompound.module.css';
 import axios from 'axios';
 
+const HEADERS = {
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*'
+}
 
 class PlugIn extends React.Component {
     constructor(props) {
@@ -19,11 +23,8 @@ class PlugIn extends React.Component {
 
     callAPI() {
         axios.get('http://localhost:2000/getCompound', {
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*'
-            },
-            params: molecule
+            headers: HEADERS,
+            params: {molecule: getMolecule()},
         })
             .then(response => {
                 this.setState({
