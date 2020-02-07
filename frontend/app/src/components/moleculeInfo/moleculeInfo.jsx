@@ -26,4 +26,3 @@ class MoleculeInfo extends React.Component {
 }
 
 export default MoleculeInfo;
-
