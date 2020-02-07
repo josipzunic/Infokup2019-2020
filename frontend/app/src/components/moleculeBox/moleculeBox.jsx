@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../moleculeBox/moleculeBox.module.css';
-
+import img from './background_molecule.png';
 class MoleculeBox extends React.Component{
     constructor(props){
         super(props);
@@ -10,8 +10,12 @@ class MoleculeBox extends React.Component{
         };
     }
     render () {
+        let link = img;
+        if(isNaN(this.props.cid) === false)
+            link = `${this.state.partOneLink}${this.props.cid}${this.state.partTwoLink}`
+
         return <div className={styles['molecule_box']}>
-            <img alt= '2D molecule structure' src={`${this.state.partOneLink}${this.props.cid}${this.state.partTwoLink}`} className={styles['molecule_image']} />
+            <img  src={link} className={styles['molecule_image']} />
         </div>
     }
 };
