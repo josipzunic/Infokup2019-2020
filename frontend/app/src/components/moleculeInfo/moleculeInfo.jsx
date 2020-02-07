@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../moleculeInfo/moleculeInfo.module.css';
+import Atribute from '../atribute/atribute';
 
 class MoleculeInfo extends React.Component {
     constructor(props) {
@@ -11,10 +12,8 @@ class MoleculeInfo extends React.Component {
         let propResponse = this.props.data;
         propResponse = Object.fromEntries(propResponse);
         return (
-            <div className={styles['molecule_info']}>
-                <b>CID:     </b>{propResponse.CID}<br /><br />
-                <b>Exact MAss:     </b>{propResponse.ExactMass}<br /><br />
-                <b>Molecular Formula:     </b>{propResponse.MolecularFormula}<br /><br />
+            <div>
+                <Atribute name='CID' value={propResponse.CID} />
             </div>
         )
     }
