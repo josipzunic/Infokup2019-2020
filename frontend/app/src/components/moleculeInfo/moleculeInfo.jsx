@@ -17,9 +17,9 @@ class MoleculeInfo extends React.Component {
                 <FirstAtribute name='CID' value={propResponse.CID} />
                 <Atribute name='Exact Mass' value={propResponse.ExactMass} />
                 <Atribute name='Molecular Formula' value={propResponse.MolecularFormula} />
-                <Atribute name='Lorem Ipsum' value='Lorem Ipsum' />
-                <Atribute name='Lorem Ipsum' value='Lorem Ipsum' />
-                <Atribute name='Lorem Ipsum' value='Lorem Ipsum' />
+                <Atribute name='Charge' value={propResponse.Charge} />
+                <Atribute name='MonoisotopicMass' value={propResponse.MonoisotopicMass} />
+                <Atribute name='MolecularWeight' value={propResponse.MolecularWeight} />
             </div>
         )
     }
