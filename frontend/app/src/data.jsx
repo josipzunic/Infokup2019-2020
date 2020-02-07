@@ -8,7 +8,7 @@
 
 
 function getMolecule() {
-    return 'COOH'
+    return 'O'
 }
 
 /*

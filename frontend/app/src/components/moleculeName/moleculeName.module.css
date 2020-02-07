@@ -2,7 +2,18 @@
     margin-top: 25px;
     margin-left: 50px;
     border-radius: 7px;
-    background-color: white;
+    background-color: #eeeeee;
     height: 50px;
     width: 300px;
+    color: #232B2B;
+    font-family: 'Martel Sans', sans-serif;
+}
+
+.span {
+    font-weight: bold;
+}
+
+.molecule_name p {
+    transform: translate(0, 50%);
+    text-align: center;
 }

@@ -13,9 +13,14 @@ class MoleculeName extends React.Component {
 
         return (
             <div className={styles['molecule_name']}>
-                <br /><b>IUPAC Name:     </b>{propResponse.IUPACName}<br />
+                <p>
+                <span className={styles['span']}>
+                     IUPACName:   
+                </span> 
+                {propResponse.IUPACName}
+                </p>
             </div>
-        )
+        );
     }
 }
 

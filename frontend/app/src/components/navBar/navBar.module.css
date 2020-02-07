@@ -4,7 +4,7 @@
     align-items: center;
     background-color: #363D47;
     color: white;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Martel Sans', sans-serif;
     height: 50px;
 }
 .navlist {
@@ -24,7 +24,9 @@
     color: #E75161;
 }
 
-h3 {
-    cursor: context-menu;
+img {
+    height: 100px;
+    width: 100px;
+    margin-top: 4px;
 }
 

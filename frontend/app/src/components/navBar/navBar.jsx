@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../navBar/navBar.module.css';
 import { Link } from 'react-router-dom';
+import Logo from '../../assets/logo.svg';
 
 const Navbar = () => (
     <nav className={styles['navbar']}>
@@ -12,11 +13,8 @@ const Navbar = () => (
                 <Link className={styles['app_link']} to='/PlugInCompound'> Plug in a molecule </Link>
             </li>
             <li>
-                <Link className={styles['app_link']} to='/BasicCompounds'> Basic molecules </Link>
+                <img src={Logo} />
             </li>
-            <h3>
-                Logo
-            </h3>
         </ul>
     </nav>
 )

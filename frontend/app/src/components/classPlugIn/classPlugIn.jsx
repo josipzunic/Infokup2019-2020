@@ -35,12 +35,13 @@ class PlugIn extends React.Component {
 
     render() {
         let data = this.state.apiResponse;
+        let cid = this.state.apiResponse.CID;
         data = Object.entries(data);
         return (
             <div>
                 <div className={styles['container']}>
                     <div>
-                        <MoleculeBox />
+                        <MoleculeBox cid={cid} />
                         <MoleculeName data={data} />
                     </div>
                     <div className={styles['mol_info']}>
