@@ -13,7 +13,7 @@ const Navbar = () => (
                 <Link className={styles['app_link']} to='/PlugInCompound'> Plug in a molecule </Link>
             </li>
             <li>
-                <img src={Logo} />
+                <img src={Logo} alt='' />
             </li>
         </ul>
     </nav>
