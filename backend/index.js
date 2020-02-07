@@ -24,7 +24,6 @@ app.get('/getCompound/', (req, res) => {
     return;
 });
 
-
 function onServerListen() {
     console.log(`App listening on ${HOST}:${PORT}`)
 }
