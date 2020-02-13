@@ -31,7 +31,7 @@ app.get('/getCompound', (req, res) => {
      * @type {String}
      */
 
-    const moleculeFormula = '';
+    let moleculeFormula = '';
 
     port.on('open', function () {
         port.on('data', function(data) {

@@ -24,7 +24,8 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "pubchem-access": "^1.0.1"
+    "pubchem-access": "^1.0.1",
+    "serialport": "^8.0.7"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
