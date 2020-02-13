@@ -31,25 +31,25 @@ app.get('/getCompound', (req, res) => {
      * @type {String}
      */
 
-    port.on('open', function () {
-        port.on('data', function (data) {
-            let moleculeFormula = '';
-            moleculeFormula = data.toString();
-            port.close();
-            pubchem
-                .setSmiles(moleculeFormula)
-                .getProperties(['IUPACName', 'ExactMass', 'MolecularFormula', 'Charge', 'MonoisotopicMass', 'MolecularWeight'])
-                .execute((data, status) => {
-                    console.log(status)
-                    if (status === 1) {     // If status is 1 the function has been exicutet with no problem
-                        res.send(data);     // Data about molecule is sent to frontend ()
-                    } else {
-                        res.status(404).send();
-                    }
-                });
-        });
+
+
+    port.on('data', function (data) {
+        let moleculeFormula = data.toString();
+        port.close();
+        console.log(moleculeFormula);
+        pubchem
+            .setSmiles(moleculeFormula)
+            .getProperties(['IUPACName', 'ExactMass', 'MolecularFormula', 'Charge', 'MonoisotopicMass', 'MolecularWeight'])
+            .execute((data, status) => {
+                if (status === 1) {     // If status is 1 the function has been executet with no problem
+                    res.send(data);     // Data about molecule is sent to frontend ()
+                } else {
+                    res.status(404).send();
+                }
+            });
+
+
     });
-    
     return;
 });
 
