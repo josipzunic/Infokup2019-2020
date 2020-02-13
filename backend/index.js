@@ -9,6 +9,7 @@ const port = new serialport('COM3', {
     baudRate: 9600,
     parser: new serialport.parsers.Readline('\n'),
 });
+const {spawn} = require('child_process');
 
 app.use(cors());         //enables CORS thus allowing requests from aplications that run on diferent domain then the one this app runs on
 
@@ -34,7 +35,7 @@ app.get('/getCompound', (req, res) => {
 
 
     port.on('data', function (data) {
-        let moleculeFormula = data.toString();
+        let moleculeFormula = data.toString(); 
         port.close();
         console.log(moleculeFormula);
         pubchem
@@ -47,7 +48,15 @@ app.get('/getCompound', (req, res) => {
                     res.status(404).send();
                 }
             });
+        const restartProcess = () => {
+            spawn(process.argv[1], process.argv.slice(2), {
+              detached: true, 
+                stdio: ['ignore', out, err]
+            }).unref()
+            process.exit()
+        }
 
+        restartProcess();
 
     });
     return;
