@@ -14,9 +14,11 @@ class MoleculeBox extends React.Component{
         if(isNaN(this.props.cid) === false)
             link = `${this.state.partOneLink}${this.props.cid}${this.state.partTwoLink}`
 
-        return <div className={styles['molecule_box']}>
-            <img  src={link} className={styles['molecule_image']} />
+        return (
+        <div className={styles['molecule_box']}>
+            <img src={link} className={styles['molecule_image']} alt='' />
         </div>
+        );
     }
 };
 
