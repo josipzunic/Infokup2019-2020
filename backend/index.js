@@ -49,6 +49,7 @@ app.get('/getCompound', (req, res) => {
                 });
         });
     });
+    
     return;
 });
 
