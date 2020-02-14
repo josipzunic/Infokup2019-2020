@@ -5,7 +5,7 @@ const HOST = '0.0.0.0';                                                         
 const app = express();                                                                  // Creates express aplication
 const pubchem = require('./node_modules/pubchem-access').domain('compound');            // Includes PubChem-access libraries for communication with PubChem REST API
 const serialport = require('serialport');
-const port = new serialport('COM3', {
+const port = new serialport('COM5', {
     baudRate: 9600,
     parser: new serialport.parsers.Readline('\n'),
 });
